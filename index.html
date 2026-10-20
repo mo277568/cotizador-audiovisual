@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador de Producción Audiovisual</title>
+  <meta name="description" content="Calcula un presupuesto estimado para tu video: tipo, duración y revisiones.">
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__text">
+      <h1>Cotizador de Producción Audiovisual</h1>
+      <p>Foto, video y administración de redes sociales. Obtén un presupuesto estimado en segundos.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Arma tu cotización</h2>
+
+      <form id="cotizador" novalidate>
+        <label for="tipo">Tipo de video</label>
+        <select id="tipo">
+          <option value="1500">Reel / Short (redes sociales)</option>
+          <option value="3500">Video corporativo</option>
+          <option value="2800">Spot publicitario</option>
+          <option value="2200">Video testimonial</option>
+        </select>
+
+        <label for="duracion">Duración: <strong id="duracionValor">1</strong> min</label>
+        <input type="range" id="duracion" min="1" max="10" value="1">
+
+        <label for="revisiones">Rondas de revisión</label>
+        <input type="number" id="revisiones" min="1" max="5" value="2">
+
+        <fieldset>
+          <legend>Extras</legend>
+          <label class="check"><input type="checkbox" data-extra="800"> Locución profesional (+$800)</label>
+          <label class="check"><input type="checkbox" data-extra="600"> Subtítulos (+$600)</label>
+          <label class="check"><input type="checkbox" data-extra="1200"> Motion graphics (+$1,200)</label>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="card card--total" aria-live="polite">
+      <h2>Presupuesto estimado</h2>
+      <p class="total" id="total">$0 MXN</p>
+      <ul class="desglose" id="desglose"></ul>
+      <p class="nota">Cotización de referencia. El precio final puede variar según el alcance del proyecto.</p>
+    </section>
+
+    <section class="servicios">
+      <h2>Servicios</h2>
+      <div class="servicios__grid">
+        <article class="servicio">
+          <img src="img/icono-foto.png" alt="Ícono de cámara fotográfica" width="96" height="96">
+          <h3>Fotografía</h3>
+          <p>Sesiones de producto, retrato y eventos con edición profesional.</p>
+        </article>
+        <article class="servicio">
+          <img src="img/icono-video.png" alt="Ícono de cámara de video" width="96" height="96">
+          <h3>Video</h3>
+          <p>Reels, spots y videos corporativos, de la idea a la entrega final.</p>
+        </article>
+        <article class="servicio">
+          <img src="img/icono-redes.png" alt="Ícono de mensaje con corazón" width="96" height="96">
+          <h3>Redes sociales</h3>
+          <p>Estrategia, calendario de contenido y administración de tus perfiles.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cotizador de Producción Audiovisual · Proyecto del Reto R2</p>
+  </footer>
+
+  <script src="js/app.min.js"></script>
+</body>
+</html>
